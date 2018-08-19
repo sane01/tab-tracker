@@ -14,8 +14,10 @@ app.get('/status', (req, res) => {
 	});
 });
 
-app.get('/', function (req, res) {
-	res.send('Hello World!');
+app.post('/register', function (req, res) {
+	res.send({
+		message: `Hello ${req.body.email}! your user was registered! Have fun!`
+	});
 });
 
 app.listen(process.env.PORT || 8081);
