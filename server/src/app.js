@@ -9,15 +9,15 @@ app.use(bodyParser.json( ));
 app.use(cors());
 
 app.get('/status', (req, res) => {
-	res.send({
-		message: 'hello world',
-	});
+    res.send({
+        message: 'hello world',
+    });
 });
 
 app.post('/register', function (req, res) {
-	res.send({
-		message: `Hello ${req.body.email}! your user was registered! Have fun!`
-	});
+    res.send({
+        message: `Hello ${req.body.email}! your user was registered! Have fun!`
+    });
 });
 
 app.listen(process.env.PORT || 8081);
